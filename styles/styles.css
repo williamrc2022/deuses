@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+:root {
+    --cor1: #ebdccb;
+    --cor2: #c3baaa;
+    --cor3: #4c4c47;
+    --cor4: #353531;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor1);
+}
+/*MENU DE NAVEGAÇÃO*/
+
+nav {
+    max-width: 100%;
+    height: 80px;
+    background-color: var(--cor3);
+
+    position: relative;
+    text-align: center;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    width: 150px;
+
+    padding: 15px;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+
+    font-size: 1.5em;
+    color: white;
+}
+
+nav ul ul {
+    /*esconde a sub-lista*/
+    position: absolute;
+    visibility: hidden;
+}
+
+nav ul ul li {
+    /*faz com que os sub-itens do ul fiquem na vertical.*/
+    display: block;
+    background-color: var(--cor3);
+}
+
+.sub-menu {
+    height: auto;
+    text-align: center;
+    visibility: visible;
+    display: block;
+    float: none;
+}
+
+nav a:hover {
+    color: var(--cor1);
+    text-decoration: underline;
+
+    transition: 0.2s;
+}
+
+.treeline {
+    color: white;
+    font-size: 2em;
+
+    display: none;
+}
+
+.treeline:hover {
+    color: var(--cor1);
+}
+
+/*MAIN*/
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px;
+}
+main h1 {
+    font-family: "Quintessential", cursive;
+    color: var(--cor4);
+    text-align: center;
+    font-size: 3em;
+    padding-top: 10px;
+}
+
+main h2 {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-family: "Quintessential", cursive;
+    color: var(--cor4);
+    font-size: 2em;
+}
+
+main h3 {
+    padding-top: 10px;
+    font-family: "Quintessential", cursive;
+    color: var(--cor4);
+    font-size: 1.5em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+main p {
+    line-height: 1.5em;
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+main ul li {
+    line-height: 1.5em;
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+    font-size: 1.2em;
+    list-style: none;
+}
+
+main li::before {
+    content: "•";
+    color: var(--cor3);
+}
+
+main img {
+    max-width: 100%;
+    padding-bottom: 20px;
+}
+
+.img-float {
+    float: right;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.img-pad {
+    padding-top: 15px;
+}
+
+main span {
+    color: var(--cor3);
+    font-weight: bold;
+}
+
+.voltar {
+    padding: 20px 0 0 20px;
+}
+
+.voltar a {
+    color: var(--cor3);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voltar a:hover {
+    color: var(--cor4);
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+
+/*ASIDE*/
+
+main aside {
+    margin-top: 50px;
+    background-color: #ebe7e2;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.233);
+}
+
+main aside h1 {
+    font-size: 1.8em;
+    background-color: var(--cor2);
+    border-radius: 10px 10px 0 0;
+    padding-bottom: 5px;
+}
+
+main aside p {
+    text-align: center;
+    font-style: italic;
+    padding: 15px;
+}
+
+.botao {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: var(--cor2);
+    color: var(--cor3);
+    font-size: 1.4em;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.37);
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.botao:hover {
+    font-size: 1.5em;
+}
+
+.button {
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+#res {
+    font-family: "Quintessential", cursive;
+    color: var(--cor3);
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: var(--cor2);
+    margin: auto;
+    max-width: 100%;
+}
+
+footer ul {
+    text-align: center;
+}
+
+footer li {
+    display: inline-block;
+    padding: 15px;
+    color: var(--cor4);
+    font-size: 1.3em;
+}
+
+footer a {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+footer a:hover {
+    font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+    nav ul li {
+        display: none;
+    }
+    .treeline {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .menu-mobile {
+        height: auto;
+    }
+
+    .menu-mobile ul {
+        height: auto;
+    }
+
+    .menu-mobile ul li {
+        width: auto;
+        display: block;
+        text-align: center;
+    }
+
+    .sub-menu {
+        position: relative;
+        height: auto;
+        text-align: center;
+        visibility: visible;
+        display: block;
+        float: none;
+    }
+
+    main h1 {
+        font-size: 2em;
+    }
+
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    main h3 {
+        font-size: 1.3em;
+    }
+
+    main p {
+        font-size: 1em;
+    }
+
+    .img-float {
+        float: none;
+    }
+
+    main ul li {
+        font-size: 1em;
+    }
+
+    footer li {
+        font-size: 1em;
+    }
+
+    main aside h1 {
+        font-size: 1.5em;
+    }
+
+    main aside p {
+        font-size: 1em;
+    }
+
+    .botao {
+        font-size: 1.2em;
+        width: 150px;
+    }
+
+    .botao:hover {
+        font-size: 1.3em;
+    }
+
+    #res {
+        font-size: 1.5em;
+    }
+}
