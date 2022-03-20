@@ -252,6 +252,7 @@ footer a {
 
 footer a:hover {
     font-weight: bold;
+   
 }
 
 @media (max-width: 1000px) {
